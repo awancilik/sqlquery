@@ -34,7 +34,4 @@ SELECT *, 'public ' + DATA_TYPE_CODE + ' ' + COLUMN_NAME +  ' { get; set; }' MOD
        END CreateTable
 	FROM    
 		INFORMATION_SCHEMA.COLUMNS
-) A  
-GO
-
-
+) A
