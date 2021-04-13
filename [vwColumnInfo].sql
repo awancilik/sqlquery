@@ -1,15 +1,3 @@
-USE [GVLHR]
-GO
-
-/****** Object:  View [dbo].[vwColumnInfo]    Script Date: 13/04/2021 16:42:02 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-
-
 CREATE VIEW [dbo].[vwColumnInfo]
 AS
 SELECT *, 'public ' + DATA_TYPE_CODE + ' ' + COLUMN_NAME +  ' { get; set; }' MODEL_PROPERTY FROM
