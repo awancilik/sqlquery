@@ -22,6 +22,9 @@ SELECT *, 'public ' + DATA_TYPE_CODE + ' ' + COLUMN_NAME +  ' { get; set; }' MOD
 			WHEN 'smalldatetime' THEN 'DateTime'
 			WHEN 'datetime' THEN 'DateTime'
 			WHEN 'uniqueidentifier' THEN 'Guid'
+			WHEN 'date' THEN 'DateOnly'
+			WHEN 'datetime2' THEN 'DateTime?'
+			WHEN 'smallint' THEN 'short'
 			ELSE ''
 		END DATA_TYPE_CODE,
 		'this.' + COLUMN_NAME + ' = dr.GetString();' DataReader,
